@@ -7,6 +7,7 @@ class HomeController < ActionController::Base
       res["RelatedTopics"]
     end
 
+    @results = results.shuffle 
     render results: results.shuffle
   end
 end
